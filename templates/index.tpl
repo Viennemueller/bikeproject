@@ -16,9 +16,10 @@
                 <div class="container py-5">
                     <div class="row px-4 px-lg-5">
                         <div class="col-lg-6">
-                            <p class="text-muted small text-uppercase mb-2" style="color:rgb(0, 0, 0);">2023 New Bikes</p>
-                            <h1 class="h2 text-uppercase mb-2" style="color:rgb(0, 0, 0);">20% off specials</h1><a class="btn btn-light"
-                                href="shop.php">Browse Bike Store</a>
+                            <p class="text-muted small text-uppercase mb-2" style="color:rgb(0, 0, 0);">2023 New Bikes
+                            </p>
+                            <h1 class="h2 text-uppercase mb-2" style="color:rgb(0, 0, 0);">20% off specials</h1><a
+                                class="btn btn-light" href="shop.php">Browse Bike Store</a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
                 </div>
             </section>
 
-            
+
             <!-- TRENDING PRODUCTS-->
             <section class="py-5">
                 <header>

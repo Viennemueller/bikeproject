@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 07:22:10
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 07:56:47
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:745846070643ff912be6355-16779326%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19919980196440012fb1e7a6-50995708%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '745846070643ff912be6355-16779326',
+  'nocache_hash' => '19919980196440012fb1e7a6-50995708',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_643ff912be8666_62335444',
+  'unifunc' => 'content_6440012fb20656_87253094',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_643ff912be8666_62335444')) {function content_643ff912be8666_62335444($_smarty_tpl) {?><header class="header bg-white">
+<?php if ($_valid && !is_callable('content_6440012fb20656_87253094')) {function content_6440012fb20656_87253094($_smarty_tpl) {?><header class="header bg-white">
 <div class="container px-lg-3">
   <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.php"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
     <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
