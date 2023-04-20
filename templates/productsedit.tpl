@@ -45,11 +45,7 @@
         </label>
         {$sku}
     </div>
-    <div class="col-lg-6">
-    <label class="form-label text-sm text-uppercase" for="category"> Category
-    </label>
-    {$category}
-</div>
+    
 <div class="col-lg-6">
     <label class="form-label text-sm text-uppercase" for="tags"> Tags
     </label>

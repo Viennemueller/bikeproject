@@ -15,9 +15,9 @@ session_start();
 
 //Database Connection
 $global_serverName = "10.114.24.23";    
-$global_uid = "arn828975";      
+$global_uid = "vie828979";      
 $global_pwd = "donoevil!";     
-$global_databaseName = "arn828975";  
+$global_databaseName = "vie828979";  
     
 $global_connectionInfo = array( "UID"=>$global_uid,                               
                          "PWD"=>$global_pwd,                               

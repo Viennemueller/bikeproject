@@ -1,25 +1,30 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 05:55:15
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-20 05:51:38
          compiled from ".\templates\categoriesedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1277278942643fe4b3f10d05-10324581%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:591956536441355a6dce00-31294750%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '28d3aebf6ed71471070864dea62f757f8f974ce2' => 
     array (
       0 => '.\\templates\\categoriesedit.tpl',
-      1 => 1679926419,
+      1 => 1681913284,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1277278942643fe4b3f10d05-10324581',
+  'nocache_hash' => '591956536441355a6dce00-31294750',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'category_id' => 0,
+    'category_name' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_643fe4b3f27a19_27669441',
+  'unifunc' => 'content_6441355a6f62f8_36174538',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_643fe4b3f27a19_27669441')) {function content_643fe4b3f27a19_27669441($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6441355a6f62f8_36174538')) {function content_6441355a6f62f8_36174538($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -35,7 +40,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="container">
 
 
-            //html code here
+        <form action="categoriesedit?category_id=<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
+.php" method="POST">
+        <div class="row gy-3">
+        <div class="col-lg-6">
+            <label class="form-label text-sm text-uppercase" for="categoryName">Category name
+            </label>
+
+            <?php echo $_smarty_tpl->tpl_vars['category_name']->value;?>
+
+        </div>
+                        <div class="col-lg-12 form-group">
+                        </div>
+                        <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
+" id="category_id" name="category_id" />
+                        <div class="text-center">
+                            <button type="submit" value="Save" id="save" name="save"
+                                class="btn btn-primary">Save Changes</button>    
+
+                            <a class="btn btn-secondary"
+                                href="categoriesedit.php?remove=true&category_id=<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
+"
+                                role="button">Remove
+                            </a>
+                        </div>
+                    </div>
+                </form>
 
 
 

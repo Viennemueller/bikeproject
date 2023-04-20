@@ -37,7 +37,6 @@
                         <th scope="col">List price</th>
                         <th scope="col">Image</th>
                         <th scope="col">Sku</th>
-                        <th scope="col">category</th>
                         <th scope="col">Tags</th>
                         <th scope="col">Description</th>
                     </tr>

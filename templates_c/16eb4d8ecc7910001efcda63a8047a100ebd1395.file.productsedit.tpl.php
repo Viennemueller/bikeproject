@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 07:11:38
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-20 05:57:47
          compiled from ".\templates\productsedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:957196374643ff69ab59ba4-97563076%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:27125439644136cb04b079-71255352%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '16eb4d8ecc7910001efcda63a8047a100ebd1395' => 
     array (
       0 => '.\\templates\\productsedit.tpl',
-      1 => 1681913284,
+      1 => 1681995418,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '957196374643ff69ab59ba4-97563076',
+  'nocache_hash' => '27125439644136cb04b079-71255352',
   'function' => 
   array (
   ),
@@ -24,16 +24,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'model_year' => 0,
     'list_price' => 0,
     'sku' => 0,
-    'category' => 0,
     'tags' => 0,
     'description' => 0,
     'stocks' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_643ff69ab74296_12175609',
+  'unifunc' => 'content_644136cb065486_54028784',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_643ff69ab74296_12175609')) {function content_643ff69ab74296_12175609($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_644136cb065486_54028784')) {function content_644136cb065486_54028784($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -89,12 +88,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <?php echo $_smarty_tpl->tpl_vars['sku']->value;?>
 
     </div>
-    <div class="col-lg-6">
-    <label class="form-label text-sm text-uppercase" for="category"> Category
-    </label>
-    <?php echo $_smarty_tpl->tpl_vars['category']->value;?>
-
-</div>
+    
 <div class="col-lg-6">
     <label class="form-label text-sm text-uppercase" for="tags"> Tags
     </label>

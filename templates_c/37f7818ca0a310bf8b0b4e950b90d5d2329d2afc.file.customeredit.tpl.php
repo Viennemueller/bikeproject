@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-18 06:03:40
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-20 05:51:26
          compiled from ".\templates\customeredit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1023422421643e952ccf9548-81771661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1633157426441354ed4dcc9-48037512%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '37f7818ca0a310bf8b0b4e950b90d5d2329d2afc' => 
     array (
       0 => '.\\templates\\customeredit.tpl',
-      1 => 1679929368,
+      1 => 1681913284,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1023422421643e952ccf9548-81771661',
+  'nocache_hash' => '1633157426441354ed4dcc9-48037512',
   'function' => 
   array (
   ),
@@ -41,9 +41,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_643e952cd18611_10791521',
+  'unifunc' => 'content_6441354ed6ccf9_27018102',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_643e952cd18611_10791521')) {function content_643e952cd18611_10791521($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6441354ed6ccf9_27018102')) {function content_6441354ed6ccf9_27018102($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -59,8 +59,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="container">
 
 
-        <form action="customeredit.php?customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
-" method="POST">
+        <form action="customeredit?customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
+.php" method="POST">
         <div class="row gy-3">
         <div class="col-lg-6">
             <label class="form-label text-sm text-uppercase" for="firstName">First name

@@ -11,7 +11,7 @@
     
     $product_id = $_GET["product_id"];
     
-    $tsql = "select product_id,product_name,brand_id,category_id,model_year,list_price,sku,category,tags,description from production.products where product_id = '" . $product_id . "'";
+    $tsql = "select product_id,product_name,brand_id,category_id,model_year,list_price,sku,tags,description from production.products where product_id = '" . $product_id . "'";
     
     //echo 'Sql:'.$tsql;
     
@@ -35,7 +35,7 @@
     
     //echo "Type: Save";
     
-    $db->updateRow(['product_name','brand_id','category_id','model_year','list_price','image','sku','category','tags','description']);
+    $db->updateRow(['product_name','brand_id','category_id','model_year','list_price','image','sku','tags','description']);
     $strmessage = "Changes Saved";
     $smarty->assign("message", $strmessage);
     
@@ -53,7 +53,6 @@
 
     $smarty->assign('sku',  $db->getFormFieldByColumnName("sku",true));
 
-    $smarty->assign('category',  $db->getFormFieldByColumnName("category",true));
     $smarty->assign('tags',  $db->getFormFieldByColumnName("tags",true));
     $smarty->assign('description',  $db->getFormFieldByColumnName("description",true));
 
