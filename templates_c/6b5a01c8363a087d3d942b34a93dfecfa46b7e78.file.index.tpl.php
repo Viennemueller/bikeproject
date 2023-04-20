@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 07:56:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-20 05:59:04
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16211872516440012faf1499-88564465%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1825185704644137185234e0-49250537%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6b5a01c8363a087d3d942b34a93dfecfa46b7e78' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1681913384,
+      1 => 1681916677,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16211872516440012faf1499-88564465',
+  'nocache_hash' => '1825185704644137185234e0-49250537',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6440012fb0d005_12431794',
+  'unifunc' => 'content_6441371853a279_39843156',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6440012fb0d005_12431794')) {function content_6440012fb0d005_12431794($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6441371853a279_39843156')) {function content_6441371853a279_39843156($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -44,9 +44,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="container py-5">
                     <div class="row px-4 px-lg-5">
                         <div class="col-lg-6">
-                            <p class="text-muted small text-uppercase mb-2" style="color:rgb(0, 0, 0);">2023 New Bikes</p>
-                            <h1 class="h2 text-uppercase mb-2" style="color:rgb(0, 0, 0);">20% off specials</h1><a class="btn btn-light"
-                                href="shop.php">Browse Bike Store</a>
+                            <p class="text-muted small text-uppercase mb-2" style="color:rgb(0, 0, 0);">2023 New Bikes
+                            </p>
+                            <h1 class="h2 text-uppercase mb-2" style="color:rgb(0, 0, 0);">20% off specials</h1><a
+                                class="btn btn-light" href="shop.php">Browse Bike Store</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
             </section>
 
-            
+
             <!-- TRENDING PRODUCTS-->
             <section class="py-5">
                 <header>
@@ -139,5 +140,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
 </body>
 
-</html>
-<?php }} ?>
+</html><?php }} ?>
