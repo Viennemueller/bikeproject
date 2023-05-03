@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-15 05:46:58
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-02 06:24:55
          compiled from ".\templates\cart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12780434526411be42c288a9-71051320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:48968039264510f2708cc65-77476640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f91a280d55d3acef165f0ad5a2e3bdcdf358c442' => 
     array (
       0 => '.\\templates\\cart.tpl',
-      1 => 1678806230,
+      1 => 1681913284,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12780434526411be42c288a9-71051320',
+  'nocache_hash' => '48968039264510f2708cc65-77476640',
   'function' => 
   array (
   ),
@@ -19,8 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'carttable' => 0,
     'subtotal' => 0,
-    'tax' => 0,
     'shipping' => 0,
+    'tax' => 0,
     'grandtotal' => 0,
     'order_id' => 0,
     'customer_id' => 0,
@@ -28,9 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6411be42c44eb4_36467358',
+  'unifunc' => 'content_64510f270a7069_71012504',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6411be42c44eb4_36467358')) {function content_6411be42c44eb4_36467358($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64510f270a7069_71012504')) {function content_64510f270a7069_71012504($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -66,16 +66,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="row">
                     <div class="col-lg-8 mb-4 mb-lg-0">
                         <!-- CART TABLE-->
+                        <div class="table-responsive mb-4">
+                            <?php echo $_smarty_tpl->tpl_vars['carttable']->value;?>
 
-                            <div class="card-body">
-                                <h5 class="text-uppercase mb-4">Your order</h5>
-                                <?php echo $_smarty_tpl->tpl_vars['carttable']->value;?>
+                            <hr>
+                            Total: <?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
 
-                                <hr>
-                                Total: <?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
-
-                            </div>
-
+                        </div>
                         <!-- CART NAV-->
                         <div class="bg-light px-4 py-3">
                             <div class="row align-items-center text-center">
@@ -98,18 +95,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             class="text-uppercase small font-weight-bold">Subtotal</strong><span
                                             class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
 </span></li>
-                                    
-                                    <li class="d-flex align-items-center justify-content-between"><strong
-                                            class="text-uppercase small font-weight-bold">Tax</strong><span
-                                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
-</span></li>
-                                    <li class="d-flex align-items-center justify-content-between"><strong
-                                            class="text-uppercase small font-weight-bold">Shipping</strong><span
-                                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
-</span></li>
                                     <li class="border-bottom my-2"></li>
                                     <li class="d-flex align-items-center justify-content-between mb-4"><strong
-                                        class="text-uppercase small font-weight-bold">Total</strong><span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
+                                            class="text-uppercase small font-weight-bold">Shipping</strong><span>$<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
+</span>
+                                            <li class="d-flex align-items-center justify-content-between mb-4"><strong
+                                            class="text-uppercase small font-weight-bold">Tax</strong><span>$<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
+</span>
+                                    <li class="d-flex align-items-center justify-content-between mb-4"><strong
+                                            class="text-uppercase small font-weight-bold">Total</strong><span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
 </span>
                                     </li>
                                     <li>
@@ -138,8 +132,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                         alt="PayPal - The safer, easier way to pay online!">
                                     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif"
                                         width="1" height="1">
-                                </form>
-
+                                    </form>
                                     </li>
                                 </ul>
                             </div>
@@ -148,6 +141,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
             </section>
         </div>
+        
         <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     </div>

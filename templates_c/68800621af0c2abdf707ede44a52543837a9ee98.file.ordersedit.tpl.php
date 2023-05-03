@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-04-19 07:05:22
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-03 05:50:10
          compiled from ".\templates\ordersedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1533497790643ff5223e6ef6-29950023%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:201320477564525882b35462-55638250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '68800621af0c2abdf707ede44a52543837a9ee98' => 
     array (
       0 => '.\\templates\\ordersedit.tpl',
-      1 => 1680100998,
+      1 => 1683118208,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1533497790643ff5223e6ef6-29950023',
+  'nocache_hash' => '201320477564525882b35462-55638250',
   'function' => 
   array (
   ),
@@ -25,12 +25,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'shipped_date' => 0,
     'store_id' => 0,
     'staff_id' => 0,
+    'brands' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_643ff5224029e5_46184406',
+  'unifunc' => 'content_64525882b4ff52_49089536',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_643ff5224029e5_46184406')) {function content_643ff5224029e5_46184406($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64525882b4ff52_49089536')) {function content_64525882b4ff52_49089536($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -45,8 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <div class="container">
 
-            <form action="ordersedit?order_id=<?php echo $_smarty_tpl->tpl_vars['order_id']->value;?>
-.php" method="POST">
+            <form action="ordersedit.php?order_id=<?php echo $_smarty_tpl->tpl_vars['order_id']->value;?>
+" method="POST">
                 <div class="row gy-3">
                     <div class="col-lg-6">
                         <label class="form-label text-sm text-uppercase" for="customerId">Customer
@@ -106,7 +107,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         role="button">Remove
                     </a>
                 </div>
+                <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Brand name</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php echo $_smarty_tpl->tpl_vars['brands']->value;?>
+
+
+                </tbody>
+            </table>
         </div>
+
+        
         </form>
 
         <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
