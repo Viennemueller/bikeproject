@@ -66,12 +66,15 @@
                     <thead>
                         <tr>
                             <th scope="col">Order ID</th>
-                            <th scope="col">Brand name</th>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">List Price</th>
+                            <th scope="col">Discount</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        {$brands}
+                        {$orders}
 
                     </tbody>
                 </table>

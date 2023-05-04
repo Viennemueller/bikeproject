@@ -60,6 +60,32 @@
     $smarty->assign('staff_id',  $db->getFormFieldByColumnName("staff_id",true));
 
     
+
+    $db = new DatabaseClass("sales.stores",false,$global_serverName,$global_connectionInfo);
+    
+    $db->mode = "edit";
+    
+    $order_id = $_GET["order_id"];
+    
+    $tsql = "select order_id, product_id, quantity, list_price, discount from sales.order_items ='" . $order_id . "' order by order_id";
+    
+    //echo 'Sql:'.$tsql;
+    
+    $db->Select($tsql, "order_id");
+    
+    $orders = $db->getGrid(['order_id', 'product_id','quantity','list_price','discount'], "orders.php");
+    
+
+    $smarty->assign('orders', $orders);
+    
+    
+    
+    $db->closeConnection();
+
+
+
+
+
     $db->closeConnection();
     
     

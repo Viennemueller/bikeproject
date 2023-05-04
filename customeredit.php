@@ -63,11 +63,39 @@ $smarty->assign('alternate_phone',  $db->getFormFieldByColumnName("alternate_pho
 $smarty->assign('alternate_company_name',  $db->getFormFieldByColumnName("alternate_company_name",false));
 $smarty->assign('alternate_street2',  $db->getFormFieldByColumnName("alternate_street2",true));
 
+
+
 $smarty->assign('country',  $db->getFormOptionFieldByColumnName("country", $db->getFieldByColumnName("country"), "SELECT id,countryname FROM countries order by countryname "));
 $smarty->assign('shipping_country',  $db->getFormOptionFieldByColumnName("shipping_country", $db->getFieldByColumnName("shipping_country"), "SELECT id,countryname FROM countries order by countryname"));
 
 $smarty->assign('alternate_country',  $db->getFormOptionFieldByColumnName("country", $db->getFieldByColumnName("alternate_country"), "SELECT id,countryname FROM countries order by countryname "));
 $smarty->assign('alternate_shipping_country',  $db->getFormOptionFieldByColumnName("shipping_country", $db->getFieldByColumnName("alternate_shipping_country"), "SELECT id,countryname FROM countries order by countryname"));
+
+
+
+$db = new DatabaseClass("sales.stores",false,$global_serverName,$global_connectionInfo);
+    
+$db->mode = "edit";
+
+$stock_id = $_GET["stock_id"];
+
+$tsql = "select st.stock_id, s.store_name, st.quantity
+from sales.stores s 
+inner join production.stocks st
+on st.store_id = s.store_id and
+st.product_id = '" . $product_id . "' 
+order by s.store_id;";
+
+//echo 'Sql:'.$tsql;
+
+$db->Select($tsql, "stock_id");
+
+$stocks = $db->getGrid(['stock_id', 'store_name','quantity'], "stockedit.php");
+
+
+$smarty->assign('stocks', $stocks);
+
+
 
 $db->closeConnection();
 

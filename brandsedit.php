@@ -3,8 +3,6 @@
 include('DatabaseClassConfig.php');
 
 //Place Code here
-
-
 include('DatabaseClass.php');
 
 
@@ -12,9 +10,9 @@ $db = new DatabaseClass("production.brands",false,$global_serverName,$global_con
 
 $db->mode = "edit";
 
-$customer_id = $_GET["brand_id"];
+$brand_id = $_GET["brand_id"];
 
-$tsql = "select brand_id, brand_name from production.brands where brand_id = '" . $brand_id . "'";
+$tsql = "select brand_id,brand_name from production.brands where brand_id = '" . $brand_id . "'";
 
 //echo 'Sql:'.$sqll;
 
@@ -38,7 +36,7 @@ if ( $_POST['save'] == "Save" ) {
 
 //echo "Type: Save";
 
-$db->updateRow(['brand_name']);
+$db->updateRow(['brand_name','image']);
 $strmessage = "Changes Saved";
 $smarty->assign("message", $strmessage);
 
@@ -57,10 +55,11 @@ $db->closeConnection();
 
 
 
+
+
 //End Code Here
 
 include('footerbase.php');
-
     $smarty->display('brandsedit.tpl');
 
 
