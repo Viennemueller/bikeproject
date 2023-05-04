@@ -25,31 +25,31 @@
                         {$order_status}
                     </div>
                     <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="orderDate">Order date
-                        </label>
-                        {$order_date}
-
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="requiredDate">Required date
-                        </label>
-                        {$required_date}
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="shippedDate">Shipped date
-                        </label>
-                        {$shipped_date}
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="storeId">Store Id
-                        </label>
-                        {$store_id}
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="staffId">Staff Id
-                        </label>
-                        {$staff_id}
-                    </div>
+                    <label class="form-label text-sm text-uppercase" for="orderDate">Order date
+                    </label>
+                    {$order_date}
+                    
+                </div>
+                <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="requiredDate">Required date
+                </label>
+                {$required_date}
+            </div>
+            <div class="col-lg-6">
+            <label class="form-label text-sm text-uppercase" for="shippedDate">Shipped date
+            </label>
+            {$shipped_date}
+        </div>
+        <div class="col-lg-6">
+        <label class="form-label text-sm text-uppercase" for="storeId">Store Id
+        </label>
+        {$store_id}
+    </div>
+    <div class="col-lg-6">
+    <label class="form-label text-sm text-uppercase" for="staffId">Staff Id
+    </label>
+    {$staff_id}
+</div>
                 </div>
                 <div class="col-lg-12 form-group">
                 </div>
@@ -62,26 +62,29 @@
                         role="button">Remove
                     </a>
                 </div>
-                <table id="example" class="table table-striped table-bordered datatable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Order ID</th>
-                            <th scope="col">Product ID</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">List Price</th>
-                            <th scope="col">Discount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        {$orders}
-
-                    </tbody>
-                </table>
         </div>
-
-
         </form>
+
+        <div class="container">
+        <br>
+        <table id="example" class="table table-striped table-bordered datatable">
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">List Price</th>
+                    <th scope="col">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {$orders}
+
+            </tbody>
+        </table>
+        <br><br>
+    </div>
 
         {include file="footer.tpl"}
     </div>

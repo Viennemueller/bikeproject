@@ -12,7 +12,7 @@
         <div class="container">
 
 
-        <form action="customeredit?customer_id={$customer_id}.php" method="POST">
+        <form action="customeredit.php?customer_id={$customer_id}" method="POST">
         <div class="row gy-3">
         <div class="col-lg-6">
             <label class="form-label text-sm text-uppercase" for="firstName">First name
@@ -156,7 +156,25 @@
                     </div>
                 </form>
 
-
+                <div class="container">
+                <br>
+                <table id="example" class="table table-striped table-bordered datatable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Id</th>
+                            <th scope="col">Order Status</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">Shipped Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        {$customers}
+        
+                    </tbody>
+                </table>
+                <br><br>
+            </div>
 
         </div>
 

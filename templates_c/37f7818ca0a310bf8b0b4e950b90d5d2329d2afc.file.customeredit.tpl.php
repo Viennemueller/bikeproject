@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-04 07:19:06
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-04 08:05:05
          compiled from ".\templates\customeredit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11396911086453beda484a68-41546153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19638463426453c9a1d82942-44898255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '37f7818ca0a310bf8b0b4e950b90d5d2329d2afc' => 
     array (
       0 => '.\\templates\\customeredit.tpl',
-      1 => 1681913284,
+      1 => 1683212676,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11396911086453beda484a68-41546153',
+  'nocache_hash' => '19638463426453c9a1d82942-44898255',
   'function' => 
   array (
   ),
@@ -38,12 +38,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'alternate_street2' => 0,
     'alternate_city' => 0,
     'alternate_state' => 0,
+    'customers' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6453beda4a4318_31854745',
+  'unifunc' => 'content_6453c9a1d9fd28_49702217',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6453beda4a4318_31854745')) {function content_6453beda4a4318_31854745($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6453c9a1d9fd28_49702217')) {function content_6453c9a1d9fd28_49702217($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -59,8 +60,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="container">
 
 
-        <form action="customeredit?customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
-.php" method="POST">
+        <form action="customeredit.php?customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
+" method="POST">
         <div class="row gy-3">
         <div class="col-lg-6">
             <label class="form-label text-sm text-uppercase" for="firstName">First name
@@ -226,7 +227,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                 </form>
 
+                <div class="container">
+                <br>
+                <table id="example" class="table table-striped table-bordered datatable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Id</th>
+                            <th scope="col">Order Status</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">Shipped Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <?php echo $_smarty_tpl->tpl_vars['customers']->value;?>
 
+        
+                    </tbody>
+                </table>
+                <br><br>
+            </div>
 
         </div>
 

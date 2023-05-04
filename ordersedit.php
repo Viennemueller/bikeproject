@@ -43,7 +43,6 @@
     $smarty->assign("message", $strmessage);
     
     }
-    $smarty->assign('order_id',  $db->getFieldByColumnName("order_id"));
 
     $smarty->assign('customer_id',  $db->getFormOptionFieldByColumnName("customer_id", $db->getFieldByColumnName("customer_id"),
      "SELECT customer_id,last_name+' '+first_name as name FROM sales.customers order by first_name,last_name"));
@@ -59,38 +58,32 @@
     $smarty->assign('store_id',  $db->getFormOptionFieldByColumnName("store_id", $db->getFieldByColumnName("store_id"), "SELECT store_id, store_name from sales.stores order by store_name "));
     $smarty->assign('staff_id',  $db->getFormFieldByColumnName("staff_id",true));
 
-    
 
-    $db = new DatabaseClass("sales.stores",false,$global_serverName,$global_connectionInfo);
     
-    $db->mode = "edit";
+    $db = new DatabaseClass("sales.order_items",false,$global_serverName,$global_connectionInfo);
+    
+    //$db->mode = "edit";
     
     $order_id = $_GET["order_id"];
     
-    $tsql = "select order_id, product_id, quantity, list_price, discount from sales.order_items ='" . $order_id . "' order by order_id";
+    $tsql = "select so.order_items_id, p.product_name, so.quantity, so.list_price, so.discount 
+    from sales.order_items so inner join production.products p on p.product_id= so.product_id
+    where so.order_id = '" . $order_id . "'";
     
     //echo 'Sql:'.$tsql;
     
-    $db->Select($tsql, "order_id");
+    $db->Select($tsql, "order_items_id");
     
-    $orders = $db->getGrid(['order_id', 'product_id','quantity','list_price','discount'], "orders.php");
+    $orders = $db->getGrid(['order_items_id','product_name','quantity','list_price','discount'], "index.php");
     
-
+    
     $smarty->assign('orders', $orders);
+
+    $smarty->assign('order_id', $order_id);
     
     
     
     $db->closeConnection();
-
-
-
-
-
-    $db->closeConnection();
-    
-    
-    
-    
     
     
     

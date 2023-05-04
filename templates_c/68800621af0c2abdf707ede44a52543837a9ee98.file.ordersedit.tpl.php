@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-04 07:57:35
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-04 08:05:21
          compiled from ".\templates\ordersedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17661622156453c7df034778-38057424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6804596506453c9b1b1da87-04274832%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '68800621af0c2abdf707ede44a52543837a9ee98' => 
     array (
       0 => '.\\templates\\ordersedit.tpl',
-      1 => 1683205071,
+      1 => 1683212392,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17661622156453c7df034778-38057424',
+  'nocache_hash' => '6804596506453c9b1b1da87-04274832',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6453c7df053864_56970989',
+  'unifunc' => 'content_6453c9b1b37e45_82458230',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6453c7df053864_56970989')) {function content_6453c7df053864_56970989($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6453c9b1b37e45_82458230')) {function content_6453c9b1b37e45_82458230($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -63,36 +63,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                     </div>
                     <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="orderDate">Order date
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['order_date']->value;?>
+                    <label class="form-label text-sm text-uppercase" for="orderDate">Order date
+                    </label>
+                    <?php echo $_smarty_tpl->tpl_vars['order_date']->value;?>
 
+                    
+                </div>
+                <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="requiredDate">Required date
+                </label>
+                <?php echo $_smarty_tpl->tpl_vars['required_date']->value;?>
 
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="requiredDate">Required date
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['required_date']->value;?>
+            </div>
+            <div class="col-lg-6">
+            <label class="form-label text-sm text-uppercase" for="shippedDate">Shipped date
+            </label>
+            <?php echo $_smarty_tpl->tpl_vars['shipped_date']->value;?>
 
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="shippedDate">Shipped date
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['shipped_date']->value;?>
+        </div>
+        <div class="col-lg-6">
+        <label class="form-label text-sm text-uppercase" for="storeId">Store Id
+        </label>
+        <?php echo $_smarty_tpl->tpl_vars['store_id']->value;?>
 
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="storeId">Store Id
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['store_id']->value;?>
+    </div>
+    <div class="col-lg-6">
+    <label class="form-label text-sm text-uppercase" for="staffId">Staff Id
+    </label>
+    <?php echo $_smarty_tpl->tpl_vars['staff_id']->value;?>
 
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="staffId">Staff Id
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['staff_id']->value;?>
-
-                    </div>
+</div>
                 </div>
                 <div class="col-lg-12 form-group">
                 </div>
@@ -107,27 +107,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         role="button">Remove
                     </a>
                 </div>
-                <table id="example" class="table table-striped table-bordered datatable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Order ID</th>
-                            <th scope="col">Product ID</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">List Price</th>
-                            <th scope="col">Discount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php echo $_smarty_tpl->tpl_vars['orders']->value;?>
-
-
-                    </tbody>
-                </table>
         </div>
-
-
         </form>
+
+        <div class="container">
+        <br>
+        <table id="example" class="table table-striped table-bordered datatable">
+            <thead>
+                <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">List Price</th>
+                    <th scope="col">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php echo $_smarty_tpl->tpl_vars['orders']->value;?>
+
+
+            </tbody>
+        </table>
+        <br><br>
+    </div>
 
         <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

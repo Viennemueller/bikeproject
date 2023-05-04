@@ -49,21 +49,19 @@ $smarty->assign('email',  $db->getFormFieldByColumnName("email",true,"",false));
 $smarty->assign('street',  $db->getFormFieldByColumnName("street",true));
 $smarty->assign('state',  $db->getFormFieldByColumnName("state",true));
 $smarty->assign('city',  $db->getFormFieldByColumnName("city",true));
-$smarty->assign('phone',  $db->getFormFieldByColumnName("phone",true));
+$smarty->assign('phone',  $db->getFormFieldByColumnName("phone",false));
 $smarty->assign('company_name',  $db->getFormFieldByColumnName("company_name",false));
-$smarty->assign('street2',  $db->getFormFieldByColumnName("street2",true));
+$smarty->assign('street2',  $db->getFormFieldByColumnName("street2",false));
 
-$smarty->assign('alternate_first_name',  $db->getFormFieldByColumnName("alternate_first_name",true));
-$smarty->assign('alternate_last_name',  $db->getFormFieldByColumnName("alternate_last_name",true));
-$smarty->assign('alternate_email',  $db->getFormFieldByColumnName("alternate_email",true));
-$smarty->assign('alternate_street',  $db->getFormFieldByColumnName("alternate_street",true));
-$smarty->assign('alternate_state',  $db->getFormFieldByColumnName("alternate_state",true));
-$smarty->assign('alternate_city',  $db->getFormFieldByColumnName("alternate_city",true));
-$smarty->assign('alternate_phone',  $db->getFormFieldByColumnName("alternate_phone",true));
+$smarty->assign('alternate_first_name',  $db->getFormFieldByColumnName("alternate_first_name",false));
+$smarty->assign('alternate_last_name',  $db->getFormFieldByColumnName("alternate_last_name",false));
+$smarty->assign('alternate_email',  $db->getFormFieldByColumnName("alternate_email",false));
+$smarty->assign('alternate_street',  $db->getFormFieldByColumnName("alternate_street",false));
+$smarty->assign('alternate_state',  $db->getFormFieldByColumnName("alternate_state",false));
+$smarty->assign('alternate_city',  $db->getFormFieldByColumnName("alternate_city",false));
+$smarty->assign('alternate_phone',  $db->getFormFieldByColumnName("alternate_phone",false));
 $smarty->assign('alternate_company_name',  $db->getFormFieldByColumnName("alternate_company_name",false));
-$smarty->assign('alternate_street2',  $db->getFormFieldByColumnName("alternate_street2",true));
-
-
+$smarty->assign('alternate_street2',  $db->getFormFieldByColumnName("alternate_street2",false));
 
 $smarty->assign('country',  $db->getFormOptionFieldByColumnName("country", $db->getFieldByColumnName("country"), "SELECT id,countryname FROM countries order by countryname "));
 $smarty->assign('shipping_country',  $db->getFormOptionFieldByColumnName("shipping_country", $db->getFieldByColumnName("shipping_country"), "SELECT id,countryname FROM countries order by countryname"));
@@ -71,36 +69,33 @@ $smarty->assign('shipping_country',  $db->getFormOptionFieldByColumnName("shippi
 $smarty->assign('alternate_country',  $db->getFormOptionFieldByColumnName("country", $db->getFieldByColumnName("alternate_country"), "SELECT id,countryname FROM countries order by countryname "));
 $smarty->assign('alternate_shipping_country',  $db->getFormOptionFieldByColumnName("shipping_country", $db->getFieldByColumnName("alternate_shipping_country"), "SELECT id,countryname FROM countries order by countryname"));
 
-
-
-$db = new DatabaseClass("sales.stores",false,$global_serverName,$global_connectionInfo);
-    
-$db->mode = "edit";
-
-$stock_id = $_GET["stock_id"];
-
-$tsql = "select st.stock_id, s.store_name, st.quantity
-from sales.stores s 
-inner join production.stocks st
-on st.store_id = s.store_id and
-st.product_id = '" . $product_id . "' 
-order by s.store_id;";
-
-//echo 'Sql:'.$tsql;
-
-$db->Select($tsql, "stock_id");
-
-$stocks = $db->getGrid(['stock_id', 'store_name','quantity'], "stockedit.php");
-
-
-$smarty->assign('stocks', $stocks);
-
-
-
 $db->closeConnection();
 
 
 
+
+$db = new DatabaseClass("sales.customers",false,$global_serverName,$global_connectionInfo);
+    
+$db->mode = "edit";
+
+
+$tsql = "select s.order_id, s.order_status, cast (s.order_date as varchar) as order_date, 
+cast (s.shipped_date as varchar) as shipped_date
+from sales.customers c inner join sales.orders s on c.customer_id = s.customer_id 
+where c.customer_id = '" . $customer_id . "'";
+
+//echo 'Sql:'.$tsql;
+
+$db->Select($tsql, "order_id");
+
+$customers = $db->getGrid(['order_id','order_status','order_date','shipped_date'], "ordersedit.php");
+
+
+$smarty->assign('customers', $customers);
+
+
+
+$db->closeConnection();
 
 
 
