@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-27 06:14:55
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-05-09 05:39:43
          compiled from ".\templates\profile.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:45238341363fcbadf2d2d56-29709535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1405138900645a3f0f778d59-04870563%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '59fb60ee59c62d1cc2866cb559f2d69baa46e7ee' => 
     array (
       0 => '.\\templates\\profile.tpl',
-      1 => 1677254711,
+      1 => 1683558705,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '45238341363fcbadf2d2d56-29709535',
+  'nocache_hash' => '1405138900645a3f0f778d59-04870563',
   'function' => 
   array (
   ),
@@ -41,9 +41,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63fcbadf2f0ca5_01418646',
+  'unifunc' => 'content_645a3f0f798337_91763780',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63fcbadf2f0ca5_01418646')) {function content_63fcbadf2f0ca5_01418646($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_645a3f0f798337_91763780')) {function content_645a3f0f798337_91763780($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -83,29 +83,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <!-- BILLING ADDRESS-->
                     <h2 class="h5 text-uppercase mb-4">Billing details</h2>
                     <div class="row">
-                    <div class="col-lg-8">
-                    <form action="profile.php" method="POST">
-                    <div class="row gy-3">
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="firstName">First name
-                        </label>
+                        <div class="col-lg-8">
+                            <form action="profile.php" method="POST">
+                                <div class="row gy-3">
+                                    <div class="col-lg-6">
+                                        <label class="form-label text-sm text-uppercase" for="firstName">First name
+                                        </label>
 
-                        <?php echo $_smarty_tpl->tpl_vars['first_name']->value;?>
+                                        <?php echo $_smarty_tpl->tpl_vars['first_name']->value;?>
 
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="lastName">Last name
-                        </label>
-                        <?php echo $_smarty_tpl->tpl_vars['last_name']->value;?>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="form-label text-sm text-uppercase" for="lastName">Last name
+                                        </label>
+                                        <?php echo $_smarty_tpl->tpl_vars['last_name']->value;?>
 
-                    </div>
-                    
+                                    </div>
+
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="email">Email address
                                         </label>
                                         <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 
-                                       
+
                                     </div>
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="phone">Phone number
@@ -116,7 +116,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="company">Company name
                                             (optional) </label>
-                                            <?php echo $_smarty_tpl->tpl_vars['company_name']->value;?>
+                                        <?php echo $_smarty_tpl->tpl_vars['company_name']->value;?>
 
                                     </div>
                                     <div class="col-lg-6 form-group">
@@ -233,19 +233,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 form-group">
-                                    </div>
+                            
                                     <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
 " id="customer_id" name="customer_id" />
                                     <div class="text-center">
-                                        <button type="submit" value="Save" id="save" name="save"
-                                            class="btn btn-primary">Save Changes</button>    
+                                        <input type="submit" value="Save" id="save" name="save">
 
-                                        <a class="btn btn-secondary"
-                                            href="profile.php?remove=true&customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
-"
-                                            role="button">Remove
-                                        </a>
                                     </div>
                                 </div>
                             </form>

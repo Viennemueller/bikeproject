@@ -36,26 +36,26 @@
                     <!-- BILLING ADDRESS-->
                     <h2 class="h5 text-uppercase mb-4">Billing details</h2>
                     <div class="row">
-                    <div class="col-lg-8">
-                    <form action="profile.php" method="POST">
-                    <div class="row gy-3">
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="firstName">First name
-                        </label>
+                        <div class="col-lg-8">
+                            <form action="profile.php" method="POST">
+                                <div class="row gy-3">
+                                    <div class="col-lg-6">
+                                        <label class="form-label text-sm text-uppercase" for="firstName">First name
+                                        </label>
 
-                        {$first_name}
-                    </div>
-                    <div class="col-lg-6">
-                        <label class="form-label text-sm text-uppercase" for="lastName">Last name
-                        </label>
-                        {$last_name}
-                    </div>
-                    
+                                        {$first_name}
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="form-label text-sm text-uppercase" for="lastName">Last name
+                                        </label>
+                                        {$last_name}
+                                    </div>
+
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="email">Email address
                                         </label>
                                         {$email}
-                                       
+
                                     </div>
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="phone">Phone number
@@ -65,7 +65,7 @@
                                     <div class="col-lg-6">
                                         <label class="form-label text-sm text-uppercase" for="company">Company name
                                             (optional) </label>
-                                            {$company_name}
+                                        {$company_name}
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label class="form-label text-sm text-uppercase" for="country">Country</label>
@@ -166,17 +166,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 form-group">
-                                    </div>
+                            
                                     <input type="hidden" value="{$customer_id}" id="customer_id" name="customer_id" />
                                     <div class="text-center">
-                                        <button type="submit" value="Save" id="save" name="save"
-                                            class="btn btn-primary">Save Changes</button>    
+                                        <input type="submit" value="Save" id="save" name="save">
 
-                                        <a class="btn btn-secondary"
-                                            href="profile.php?remove=true&customer_id={$customer_id}"
-                                            role="button">Remove
-                                        </a>
                                     </div>
                                 </div>
                             </form>

@@ -42,9 +42,11 @@
     }
     $smarty->assign('product_id',  $db->getFieldByColumnName("product_id",true,"",false));
 
-    $smarty->assign('brand_id',  $db->getFormFieldByColumnName("brand_id",true,"",false));
+    $smarty->assign('brand_id',  $db->getFormFieldByColumnName("brand_id",$db->getFieldByColumnName("brand_id"), "SELECT brand_id from production.products order by brand_id"));
 
-    $smarty->assign('category_id',  $db->getFormFieldByColumnName("category_id",true,"",false));
+    $smarty->assign('category_id',  $db->getFormFieldByColumnName("category_id",$db->getFieldByColumnName("category_id"), "SELECT category_id from production.products order by category_id "));
+
+
     
      $smarty->assign('product_name',  $db->getFormFieldByColumnName("product_name",true));
 
